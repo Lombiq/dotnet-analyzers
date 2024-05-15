@@ -40,8 +40,6 @@ dotnet build MySolution.sln --no-incremental -warnaserror /p:TreatWarningsAsErro
 
 > ⚠ If you are using the NuGet package, run `dotnet msbuild "-t:Restore;LombiqNetAnalyzers" MySolution.sln` first to ensure the _.editorconfig_ file is deployed. This is especially important for CI usage. For local development, you can simply rebuild the solution.
 
-Note that code style analysis is experimental in the .NET 5 SDK and [may change in later versions](https://github.com/dotnet/roslyn/issues/49044).
-
 ## Non-SDK-style .NET Framework projects
 
 Non-SDK-style .NET Framework projects can't use `dotnet build` for analyzer warnings to show during build, not just in Visual Studio, because it won't resolve `<PackageReference>` elements (see [this issue](https://github.com/dotnet/msbuild/issues/5250)). You'll need to use the following command to achieve what's elaborated above for `dotnet build` (change the MSBuild path to a suitable one):
