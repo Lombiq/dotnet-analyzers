@@ -5,17 +5,16 @@
     <DefaultItemExcludes>$(DefaultItemExcludes);.git*;</DefaultItemExcludes>
     <!-- This is duplicated with Lombiq.Analyzers.nuspec.template but is needed for the NuGet publishing workflow not to
     throw a warning. See https://github.com/Lombiq/GitHub-Actions/issues/236. -->
-    <PackageLicenseFile>License.md</PackageLicenseFile>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
   </PropertyGroup>
 
   <!-- This project is built with an externally generated .nuspec file so NuGet-related properties are not needed here.
        The package properties can be updated in the Lombiq.Analyzers.nuspec.template file. The dependencies are created
-       from the AnalyzerPackages.props file, although if needed further dependencies can be added to 
+       from the AnalyzerPackages.props file, although if needed further dependencies can be added to
        Lombiq.Analyzers.nuspec.template as well.
        -->
-  
+
   <ItemGroup>
-    <None Include="License.md" Pack="true" PackagePath="" />
     <None Include="Readme.md" Link="Readme.md" />
     <None Include="NuGetIcon.png" Pack="true" PackagePath="" />
     <None Include="build\**" Pack="true" PackagePath="build\" />
