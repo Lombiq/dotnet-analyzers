@@ -3,9 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DefaultItemExcludes>$(DefaultItemExcludes);.git*;</DefaultItemExcludes>
-    <!-- This is duplicated with Lombiq.Analyzers.OrchardCore.nuspec.template but is needed for the NuGet publishing
-    workflow not to throw a warning. See https://github.com/Lombiq/GitHub-Actions/issues/236. -->
-    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
   </PropertyGroup>
 
   <!-- This project is built with an externally generated .nuspec file so NuGet-related properties are not needed here.
