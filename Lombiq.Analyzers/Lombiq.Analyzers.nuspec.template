@@ -5,7 +5,7 @@
         <version>$version$</version>
         <title>Lombiq .NET Analyzers</title>
         <authors>Lombiq Technologies</authors>
-        <license type="file">License.md</license>
+        <license type="expression">BSD-3-Clause</license>
         <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
         <icon>NuGetIcon.png</icon>
         <projectUrl>https://github.com/Lombiq/.NET-Analyzers/blob/dev/Lombiq.Analyzers</projectUrl>
