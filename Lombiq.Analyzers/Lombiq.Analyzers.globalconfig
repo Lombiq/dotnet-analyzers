@@ -634,6 +634,7 @@ dotnet_diagnostic.S4261.severity = warning
 dotnet_diagnostic.S4432.severity = warning
 dotnet_diagnostic.S4487.severity = warning
 dotnet_diagnostic.S4564.severity = warning
+dotnet_diagnostic.S6934.severity = none
 dotnet_diagnostic.S881.severity = warning
 
 # StyleCop.Analyzers rules
