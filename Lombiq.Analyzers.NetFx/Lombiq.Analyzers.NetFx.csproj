@@ -5,7 +5,7 @@
     <DefaultItemExcludes>$(DefaultItemExcludes);.git*;</DefaultItemExcludes>
     <!-- This is duplicated with Lombiq.Analyzers.NetFx.nuspec.template but is needed for the NuGet publishing workflow
     not to throw a warning. See https://github.com/Lombiq/GitHub-Actions/issues/236. -->
-    <PackageLicenseFile>License.md</PackageLicenseFile>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
   </PropertyGroup>
 
   <!-- This project is built with an externally generated .nuspec file so NuGet-related properties are not needed here.
@@ -13,7 +13,7 @@
        created from the AnalyzerPackages.props file, although if needed further dependencies can be added to
        Lombiq.Analyzers.NetFx.nuspec.template as well.
        -->
-  
+
   <ItemGroup>
     <!-- Note how these files need to be linked form Lombiq.Analyzers, without a dependency so .NET Framework projects
     don't get .NET configs from its Build.props. -->
@@ -22,7 +22,6 @@
     <None Include="..\Lombiq.Analyzers\Lombiq.Analyzers.globalconfig" Link="Lombiq.Analyzers.globalconfig" Pack="true" PackagePath=""  />
     <None Include="..\Lombiq.Analyzers\SonarLint.xml" Link="SonarLint.xml" Pack="true" PackagePath=""  />
     <None Include="..\Lombiq.Analyzers\stylecop.json" Link="stylecop.json" Pack="true" PackagePath=""  />
-    <None Include="License.md" Pack="true" PackagePath="" />
     <None Include="Readme.md" Link="Readme.md" />
     <None Include="NuGetIcon.png" Pack="true" PackagePath="" />
     <None Include="build\**" Pack="true" PackagePath="build\" />
