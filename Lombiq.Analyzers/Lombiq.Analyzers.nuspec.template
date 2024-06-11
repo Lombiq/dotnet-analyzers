@@ -5,8 +5,7 @@
         <version>$version$</version>
         <title>Lombiq .NET Analyzers</title>
         <authors>Lombiq Technologies</authors>
-        <license type="file">License.md</license>
-        <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+        <license type="expression">BSD-3-Clause</license>
         <icon>NuGetIcon.png</icon>
         <projectUrl>https://github.com/Lombiq/.NET-Analyzers/blob/dev/Lombiq.Analyzers</projectUrl>
         <description>Lombiq .NET Analyzers: .NET code analyzers and code convention settings for general .NET projects. See the project website for detailed documentation.</description>
