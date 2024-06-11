@@ -10,7 +10,7 @@
   -->
 
   <ItemGroup Condition="'$(ImportPackageAgain)' == 'true'">
-    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.0.1-alpha.1.osoe-867">
+    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.1.0">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
