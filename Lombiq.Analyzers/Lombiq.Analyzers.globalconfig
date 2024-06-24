@@ -635,6 +635,8 @@ dotnet_diagnostic.S4432.severity = warning
 dotnet_diagnostic.S4487.severity = warning
 dotnet_diagnostic.S4564.severity = warning
 dotnet_diagnostic.S6934.severity = none
+# We don't utilize this rule. Warnings also don't show up in IDE.
+dotnet_diagnostic.S6964.severity = none
 dotnet_diagnostic.S881.severity = warning
 
 # StyleCop.Analyzers rules
