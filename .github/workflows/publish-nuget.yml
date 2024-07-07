@@ -11,6 +11,6 @@ jobs:
     with:
       # Don't generate any symbol package because we're not including the Lombiq.Analyzers.dll in the NuGet package
       # itself, either. See Invoke-BeforePack.ps1 for details.
-      dotnet-pack-include-symbols: "false"
+      dotnet-pack-include-symbols: 'false'
     secrets:
       API_KEY: ${{ secrets.DEFAULT_NUGET_PUBLISH_API_KEY }}
