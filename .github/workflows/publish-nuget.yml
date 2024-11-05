@@ -7,6 +7,7 @@ on:
 
 jobs:
   publish-nuget:
+    name: Publish to NuGet
     uses: Lombiq/GitHub-Actions/.github/workflows/publish-nuget.yml@dev
     with:
       # Don't generate any symbol package because we're not including the Lombiq.Analyzers.dll in the NuGet package
