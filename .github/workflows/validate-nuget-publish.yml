@@ -1,17 +1,16 @@
-name: Publish to NuGet
+name: Validate NuGet Publish
 
 on:
+  pull_request:
   push:
-    tags:
-      - v*
+    branches:
+      - dev
 
 jobs:
-  publish-nuget:
-    name: Publish to NuGet
-    uses: Lombiq/GitHub-Actions/.github/workflows/publish-nuget.yml@dev
+  validate-nuget-publish:
+    name: Validate NuGet Publish
+    uses: Lombiq/GitHub-Actions/.github/workflows/validate-nuget-publish.yml@dev
     with:
       # Don't generate any symbol package because we're not including the Lombiq.Analyzers.dll in the NuGet package
       # itself, either. See Invoke-BeforePack.ps1 for details.
       dotnet-pack-include-symbols: 'false'
-    secrets:
-      API_KEY: ${{ secrets.DEFAULT_NUGET_PUBLISH_API_KEY }}
