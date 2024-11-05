@@ -10,3 +10,7 @@ jobs:
   validate-nuget-publish:
     name: Validate NuGet Publish
     uses: Lombiq/GitHub-Actions/.github/workflows/validate-nuget-publish.yml@dev
+    with:
+      # Don't generate any symbol package because we're not including the Lombiq.Analyzers.dll in the NuGet package
+      # itself, either. See Invoke-BeforePack.ps1 for details.
+      dotnet-pack-include-symbols: 'false'
