@@ -6,7 +6,7 @@
             'customType': 'regex',
             'fileMatch': ['(^|/)AnalyzerPackages\\.props$'],
             'matchStrings': [
-                '<AnalyzerPackage Include="(?<depName>[^"]+)" Version="(?<currentValue>[^"]+)"/>'
+                '<AnalyzerPackage Include="(?<packageName>[^"]+)" Version="(?<currentVersion>[^"]+)"/>'
             ],
             'datasourceTemplate': 'nuget',
             'versioningTemplate': 'nuget'
