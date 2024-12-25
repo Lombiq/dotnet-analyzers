@@ -10,14 +10,25 @@
                 // The capture group names are required as such.
                 '<AnalyzerPackage Include="(?<depName>[^"]+)" Version="(?<currentValue>[^"]+)"/>'
             ],
-            'datasourceTemplate': 'nuget',
+            'datasourceTemplate': 'nuget', // #spell-check-ignore-line
             'versioningTemplate': 'nuget'
         },
     ],
-    'packageRules': [
+    packageRules: [
         {
-            'groupName': 'All packages',
-            'matchUpdateTypes': ['*'],
+            // Microsoft.CodeAnalysis.CSharp.CodeStyle references Roslyn, and if its version is higher than that of the
+            // locally installed SDK, it'll emit a "CSC : error CS9057: The analyzer assembly
+            // '/home/runner/.nuget/packages/microsoft.codeanalysis.csharp.codestyle/4.11.0/analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.CodeStyle.dll'
+            // references version '4.31.0.0' of the compiler, which is newer than the currently running version
+            // '4.10.0.0'." error. So, we need to update it manually together with the SDK (and targeted .NET version).
+            matchPackageNames: [
+                'Microsoft.CodeAnalysis.CSharp.CodeStyle',
+            ],
+            enabled: false,
+        },
+        {
+            groupName: 'All packages',
+            matchUpdateTypes: ['*'],
         },
     ],
 }
