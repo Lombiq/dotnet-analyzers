@@ -10,7 +10,7 @@
                 // The capture group names are required as such.
                 '<AnalyzerPackage Include="(?<depName>[^"]+)" Version="(?<currentValue>[^"]+)"/>'
             ],
-            'datasourceTemplate': 'nuget',
+            'datasourceTemplate': 'nuget', // #spell-check-ignore-lin
             'versioningTemplate': 'nuget'
         },
     ],
