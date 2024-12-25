@@ -1,11 +1,15 @@
 {
     '$schema': 'https://docs.renovatebot.com/renovate-schema.json',
     'extends': ['github>Lombiq/renovate-config:default-dotnet.json5'],
-    'packageRules': [
+    'customManagers': [
         {
-            'matchFileNames': ['**/*AnalyzerPackages.props'],
-            'matchManagers': ['nuget'],
-            'enabled': true
-        }
+            'customType': 'regex',
+            'fileMatch': ['(^|/)AnalyzerPackages\\.props$'],
+            'matchStrings': [
+                '<(?<depName>[^\\s]+)Version>(?<currentValue>[^<]+)</(?<depName>[^\\s]+)Version>'
+            ],
+            'datasourceTemplate': 'nuget',
+            'versioningTemplate': 'nuget'
+        },
     ],
 }
