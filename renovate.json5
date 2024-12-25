@@ -14,4 +14,10 @@
             'versioningTemplate': 'nuget'
         },
     ],
+    'packageRules': [
+        {
+            'groupName': 'All packages',
+            'matchUpdateTypes': ['*'],
+        },
+    ],
 }
