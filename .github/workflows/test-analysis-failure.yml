@@ -12,7 +12,6 @@ jobs:
     name: Test Analysis Failure - NuGet PackageReference
     uses: Lombiq/GitHub-Actions/.github/workflows/test-analysis-failure.yml@dev
     with:
-      dotnet-version: 9.0.101
       machine-types: '["ubuntu-24.04", "windows-2022"]'
       build-directory: TestSolutions/Lombiq.Analyzers.PackageReference
       timeout-minutes: 30
@@ -26,6 +25,7 @@ jobs:
     name: Test Analysis Failure - Local ProjectReference
     uses: Lombiq/GitHub-Actions/.github/workflows/test-analysis-failure.yml@dev
     with:
+      dotnet-version: 9.0.101
       machine-types: '["ubuntu-24.04", "windows-2022"]'
       build-directory: TestSolutions/Lombiq.Analyzers.ProjectReference
       timeout-minutes: 30
