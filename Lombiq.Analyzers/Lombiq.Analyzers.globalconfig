@@ -546,6 +546,8 @@ dotnet_diagnostic.MA0111.severity = none
 dotnet_diagnostic.MA0120.severity = warning
 dotnet_diagnostic.MA0121.severity = warning
 dotnet_diagnostic.MA0122.severity = warning
+dotnet_diagnostic.MA0165.severity = silent
+
 
 # SonarAnalyzer.CSharp rules
 dotnet_diagnostic.S100.severity = warning
@@ -579,6 +581,8 @@ dotnet_diagnostic.S2148.severity = warning
 dotnet_diagnostic.S2197.severity = warning
 dotnet_diagnostic.S2278.severity = warning
 dotnet_diagnostic.S2302.severity = warning
+# Covered by CA1822.
+dotnet_diagnostic.S2325.severity = none
 dotnet_diagnostic.S2330.severity = warning
 dotnet_diagnostic.S2333.severity = warning
 dotnet_diagnostic.S2342.severity = warning
