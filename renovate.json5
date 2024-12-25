@@ -3,9 +3,11 @@
     'extends': ['github>Lombiq/renovate-config:default-dotnet.json5'],
     'customManagers': [
         {
+            // AnalyzerPackages.props contains NuGet package references in a custom format. Supporting it here.
             'customType': 'regex',
             'fileMatch': ['(^|/)AnalyzerPackages\\.props$'],
             'matchStrings': [
+                // The capture group names are required as such.
                 '<AnalyzerPackage Include="(?<depName>[^"]+)" Version="(?<currentValue>[^"]+)"/>'
             ],
             'datasourceTemplate': 'nuget',
