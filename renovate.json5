@@ -10,8 +10,7 @@
                 // The capture group names are required as such.
                 '<AnalyzerPackage Include="(?<depName>[^"]+)" Version="(?<currentValue>[^"]+)"/>'
             ],
-	    // #spell-check-ignore-line in the Lombiq.Analyzers
-            'datasourceTemplate': 'nuget',
+            'datasourceTemplate': 'nuget', // #spell-check-ignore-line
             'versioningTemplate': 'nuget'
         },
     ],
