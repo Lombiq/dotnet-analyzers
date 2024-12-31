@@ -46,7 +46,7 @@
          'C:\Users\runneradmin\.nuget\packages\microsoft.codeanalysis.csharp.codestyle\4.7.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.CodeStyle.dll' #spell-check-ignore-line
          references version '4.7.0.0' of the compiler, which is newer than the currently running version '4.6.0.0'."
          kind. -->
-    <PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="4.7.0">
+    <PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="4.12.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers;</IncludeAssets>
     </PackageReference>
