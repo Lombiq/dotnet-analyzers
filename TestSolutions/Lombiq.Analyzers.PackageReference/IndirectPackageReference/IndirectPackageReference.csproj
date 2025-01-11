@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <!-- This project demonstrates that the package reference doesn't transfer the analyzer effect to its dependents. If
-       you set ImportPackageAgain to "true" and run static code analysis on this soltuion you will get twice as many
+       you set ImportPackageAgain to "true" and run static code analysis on this solution you will get twice as many
        warnings. This is the desired behavior, shows that the analyzers only activate when they are explicitly imported.
   -->
 
